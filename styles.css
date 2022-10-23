@@ -1,0 +1,730 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  block-size: border-box;
+}
+
+:root {
+  /* fuentes */
+  --rajFont: "Rajdhani";
+  --cursFont: "Caveat";
+  /* colores */
+  --mainColor: #32aad6;
+  --accent: #56bd97;
+  --textColor: #151d2a;
+  --white: white;
+  --grayColor: #eef2fa;
+  --yellColor: #f2e155;
+}
+
+/* Para que el hover sólo se aplique en dispositivos con hover */
+@media(hover:hover) {
+
+  li a:hover{
+    color: var(--accent);
+  }
+
+  .btn:hover {
+    border: 1px solid var(--accent);
+    color: var(--mainColor);
+    transition: .3s all ease-in-out;
+  }
+  
+  
+  .p-andots a:hover {
+    color: var(--yellColor);
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+   text-shadow: #151d2a 1px 1px 5px;
+   }
+
+   #check:hover {
+    background-color: var(--accent);
+    transition: .3s all ease-in-out;
+  
+  }
+
+  .inner-text p {
+    opacity: 0;
+    font-family: var(--rajFont), sans-serif;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 0.7em;
+    font-weight: 700;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .img-container:hover p {
+    opacity: 0.7 !important;
+  }
+
+  #best-selling div:nth-child(2) .card:hover > div:nth-child(1) {
+    transition: 0.25s all ease-in-out;
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 179, 0, 0.3) 50%,
+        rgba(129, 148, 162, 0.1) 100%
+      ),
+      url(./img/costarRica.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+
+  }
+
+  /* Para que los elementos escondidos en hover estén visibles en dispositivos son hover */
+
+  @media(hover:none){
+    .inner-text p {
+      opacity: .7;
+      font-family: var(--rajFont), sans-serif;
+      text-transform: uppercase;
+      color: var(--white);
+      font-size: 0.7em;
+      font-weight: 700;
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+/* maquetación firs-mobile */
+
+.display-n {
+  display: none;
+}
+
+/* Generales */
+
+/* Hay un problema de un diminuto scroll horizontal que no logro encontrar */
+body {
+  position: relative;
+  flex-direction: row-reverse;
+  background-color: var(--white);
+  max-width: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+
+
+h1 {
+  font-family: var(--rajFont), sans-serif;
+}
+
+h3 {
+  font-family: var(--cursFont), cursive;
+}
+
+i {
+  font-size: 18px;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--textColor);
+  font-family: var(--rajFont), sans-serif;
+  color: #ddd;
+  padding-top: 2.5em;
+}
+
+input,
+select {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: var(--textColor);
+  padding: 10px 0px;
+  margin: 0em 0.7em;
+  font-family: var(--rajFont), sans-serif;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: var(--textColor);
+  padding: 1em 4em;
+  font-family: var(--rajFont), sans-serif;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+/* Header*/
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1em 1.2em;
+  background-color: var(--white);
+}
+
+#logo {
+  width: 125px;
+  height: 30px;
+  background-image: url(./img/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.btn-menu {
+  background-color: transparent;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+#btn-search {
+  margin-left: 1.5em;
+  cursor: pointer;
+}
+
+/* Menú lateral para móvil */
+
+#mobile-menu{
+  position: fixed;
+  right: -1000px;
+  width: 80%;
+  height: 100%;
+  background-color: var(--grayColor);
+  z-index: 1000;
+}
+
+#mobile-menu>div:first-of-type{
+display: flex;
+width: 100%;
+height: 40px;
+flex-direction: row;
+justify-content: right;
+align-items: center;
+}
+
+.close{
+  background-color: var(--textColor);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .01em;
+  margin-right: 1em;
+  cursor: pointer;
+
+}
+
+.close i{
+  color:var(--grayColor);
+  font-size: 15px;
+}
+
+#desktop-nav ul li{
+font-family: var(--rajFont);
+font-size: 12px;
+font-weight: 700;
+
+border-bottom: 1px solid #ddd;
+padding: 1em 2em;
+display: flex;
+justify-content: space-between;
+
+
+}
+
+.accordion-plus{
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.line{
+  position: relative;
+  width: 3px;
+  height: 3px;
+  background-color: var(--grayColor);
+  z-index: 1000;
+}
+
+.accordion-plus :nth-child(2){
+  position: relative;
+  transform: rotate(turn);
+  z-index: 1001;
+}
+
+/* Hero  */
+
+#hero{
+
+
+}
+
+#hero-img {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/slide6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-img div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero-img h1 {
+  color: var(--white);
+  letter-spacing: 2px;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 55px;
+  word-wrap: break-word;
+  text-shadow: #151d2a 2px 2px 10px;
+}
+#hero-img h3 {
+  color: var(--yellColor);
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  word-wrap: break-word;
+  text-shadow: #151d2a 2px 2px 10px;
+  text-align: center;
+}
+
+.p-andots {
+  width: 50%;
+  font-family: var(--rajFont), sans-serif;
+  color: var(--white);
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  word-wrap: break-word;
+  -shadow: #151d2a 3px 3px 4px;
+  text-align: center;
+  margin-top: 2em;
+
+}
+
+.p-andots a {
+  cursor: pointer;
+ color: #ffffff;
+ transition: all .20s ease-in-out;
+}
+
+.carousel-dots {
+  display: flex;
+  flex-direction: row !important;
+  gap: 4.5px;
+  margin-top: 3em;
+}
+.dot {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
+/* Sección 1 */
+
+#choose-trip {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0em 0.7em;
+  margin-top: 2em;
+  background-color: var(--white);
+}
+
+#check {
+  width: 100%;
+  background-color: var(--mainColor);
+  border: 1px solid #ddd;
+  color: white;
+  padding: 10px 0;
+  font-family: var(--rajFont), sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+
+
+#check-find {
+  font-size: small;
+
+}
+
+/* Sección 2 */
+
+#top-destination {
+  width: 100%;
+  margin: 2em 0em;
+  height: auto;
+  background-color: var(--grayColor);
+}
+
+.title-container {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.title-container img {
+  width: 10px;
+  height: 10px;
+}
+
+.title-container h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+.title-container h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--mainColor);
+}
+
+.img-container {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 145, 255, 0.3) 50%,
+    rgba(129, 148, 162, 0.1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.inner-text {
+  background-image: none !important;
+  padding-left: 1.5em;
+}
+
+.inner-text h4 {
+  opacity: 0.8;
+  font-weight: 700;
+  font-family: var(--rajFont), sans-serif;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.img-mainContainer div {
+  margin-top: 0.6em;
+}
+
+.img-mainContainer div:nth-child(1) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/1.jpg);
+}
+.img-mainContainer div:nth-child(2) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/2.jpg);
+}
+.img-mainContainer div:nth-child(3) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/4.jpg);
+}
+.img-mainContainer div:nth-child(4) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/6.jpg);
+}
+.img-mainContainer div:nth-child(5) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/3.jpg);
+}
+.img-mainContainer div:nth-child(5) {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 145, 255, 0.3) 50%,
+      rgba(129, 148, 162, 0.1) 100%
+    ),
+    url(./img/5.jpg);
+}
+.img-mainContainer div {
+  margin-top: 0.6em;
+}
+
+#destination-buttonContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+#inner-text {
+  background-color: transparent;
+}
+
+/* Sección 3 */
+
+#best-selling {
+  width: 100%;
+  height: auto;
+  padding: 2em 0em;
+}
+
+.title-container {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.card-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  padding: 1em 0em;
+}
+
+.card {
+  width: 95%;
+  height: auto;
+}
+
+#best-selling div:nth-child(2) .card > div:nth-child(1) {
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  background-image: url(./img/costarRica.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2em;
+}
+
+#best-selling div:nth-child(3) .card > div:nth-child(1) {
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+  background-image: url(./img/11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2em;
+}
+#best-selling div:nth-child(4) .card > div:nth-child(1) {
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+  background-image: url(./img/10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2em;
+}
+#best-selling div:nth-child(5) .card > div:nth-child(1) {
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  text-align: center;
+  background-image: url(./img/7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2em;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1em;
+}
+
+.card i {
+  font-size: 12px;
+  color: #fd9d14;
+}
+
+.card-detail p:first-of-type {
+  font-family: var(--rajFont), sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 0.3em;
+}
+
+.card-detail p:nth-child(2) {
+  font-family: var(--rajFont), sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+  letter-spacing: 1.5px;
+  font-size: larger;
+}
+
+.card-review {
+  display: flex;
+  flex-direction: row;
+  gap: 1.4em;
+  margin-bottom: 1.5em;
+}
+.card-review span {
+  font-family: var(--rajFont), sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.card-detail div:nth-child(4) {
+  font-family: var(--rajFont), sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding-top: 1em;
+  margin-bottom: 2em;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-detail > div > span:nth-child(2) {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+/* Footer */
+
+.block-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+.block-up p:first-of-type {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 1em 0;
+}
+
+.block-up p:nth-of-type(2) {
+font-size: 12px;
+margin-bottom: 1.5em;
+}
+
+.pay-cards {
+  width: auto;
+  height: 50px;
+  background-image: url(./img/cardcredit.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.block-up a{
+  font-size: 12px;
+  color: #ddd;
+}
+
+.block-up div:nth-child(4){
+  font-size: 12px;
+}
+
+.block-up button{
+  letter-spacing: 1px;
+  font-family: var(--rajFont), sans-serif;
+  color: var(--accent);
+  background-color: transparent;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-style: double none double none;
+  border-width:3px;
+  border-color: #ddd;
+  margin-bottom: 3.5em;
+}
+
+.block-down{
+  border-top-style: solid;
+  border-width: .8em;
+  font-size: 12px;
+  padding: 2em 1em;
+}
+
+
+
+
+
+
+
+

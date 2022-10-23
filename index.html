@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Proyecto Final HTML, CSS, Javascript" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, Javascript, proyecto, bootcamp, programación"
+    />
+    <!-- Metas para Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Proyecto Bootcamp Ismael" />
+    <meta
+      property="og:title"
+      content="Una web sencilla para integrar habilidades"
+    />
+    <meta
+      property="og:description"
+      content="Esta web es sólo para integrar habilidades HTML, CSS y Javascript pasando así al próximo módulo del bootcamp"
+    />
+    <!-- Metas para Facebook -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final-Ismael</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Rajdhani&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./animations.css" />
+    <!-- <base
+    href="https://adventismael.d3i5negfn33i3u.amplifyapp.com/proyecto-final-html/""> -->
+  </head>
+
+  <body>
+    <!-- For mobile -->
+    <section id="mobile-menu" class="">
+      <div>
+        <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+      </div>
+      <nav id="desktop-nav">
+        <ul>
+          <li>
+            Home
+            <button class="accordion-plus">
+              <div class="line"></div>
+              <div class="line"></div>
+            </button>
+          </li>
+          <li>
+            Booking
+            <button class="accordion-plus">
+              <div class="line"></div>
+              <div class="line"></div>
+            </button>
+          </li>
+          <li>
+            Tour
+            <button class="accordion-plus">
+              <div class="line"></div>
+              <div class="line"></div>
+            </button>
+          </li>
+          <li>About</li>
+          <li>
+            Pages
+            <button class="accordion-plus">
+              <div class="line"></div>
+              <div class="line"></div>
+            </button>
+          </li>
+          <li>Blog</li>
+          <li>
+            Elements
+            <button class="accordion-plus">
+              <div class="line"></div>
+              <div class="line"></div>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <main id="main">
+      <header id="header">
+      <div id="logo"><a href="#header"></a></div>
+      <div id="left-header">
+        <nav id="desktop-nav" class="display-n">
+          <ul>
+            <li>
+              Home
+              <button class="accordion-arrow">
+                <div id="line"></div>
+                <div id="line"></div>
+              </button>
+            </li>
+            <li>
+              Booking
+              <button class="accordion-arrow">
+                <div id="line"></div>
+                <div id="line"></div>
+              </button>
+            </li>
+            <li>
+              Tour
+              <button class="accordion-arrow">
+                <div id="line"></div>
+                <div id="line"></div>
+              </button>
+            </li>
+            <li>About</li>
+            <li>
+              Pages
+              <div class="new">new</div>
+              <button class="accordion-arrow">
+                <div id="line"></div>
+                <div id="line"></div>
+              </button>
+            </li>
+            <li>Blog</li>
+            <li>
+              Elements
+              <button class="accordion-arrow">
+                <div id="line"></div>
+                <div id="line"></div>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <button id="Hamburger" class="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <button id="btn-search" class="btn-menu">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </header>
+      <section id="hero">
+        <div id="hero-img">
+          <div>
+            <h3>Changing Text</h3>
+            <h1>Changing Text</h1>
+          </div>
+          <div id="p-andots" class="p-andots">
+            <a href="#best-selling">47520 tours are available, book now</a>
+            <div id="carousel-dots" class="carousel-dots">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+          </div>
+        </div>
+        <div id="choose-trip">
+          <label class="display-n" for="start-day">start day</label>
+          <input id="start-day" type="date" />
+          <label class="display-n" for="return-day">start day</label>
+          <input id="return-day" type="date" />
+          <select name="location">
+            <option value="pais1">pais1</option>
+            <option value="pais2">pais2</option>
+            <option value="pais3">pais3</option>
+            <option value="pais4">pais4</option>
+            <option value="pais5">pais5</option>
+          </select>
+          <button id="check">
+            <i id="check-find" class="fas fa-search"></i>
+            check
+          </button>
+        </div>
+      </section>
+
+      <section id="top-destination">
+        <div id="title-mainContainer" class="title-container">
+          <h3>around the word</h3>
+          <div>
+            <h1>top destinations</h1>
+            <img src="./img/airplane.png" alt="airplane" class="display-n" />
+          </div>
+        </div>
+        <div class="img-mainContainer">
+          <div class="img-container">
+            <div class="inner-text">
+              <h4>text</h4>
+              <p>text</p>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="inner-text">
+              <h4>text</h4>
+              <p>text</p>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="inner-text">
+              <h4>text</h4>
+              <p>text</p>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="inner-text">
+              <h4>text</h4>
+              <p>text</p>
+            </div>
+          </div>
+          <div class="img-container">
+            <div class="inner-text">
+              <h4>text</h4>
+              <p>text</p>
+            </div>
+          </div>
+        </div>
+        <div id="destination-buttonContainer"><button class="btn">view all destinations</button></div>
+      </section>
+
+      <section id="best-selling">
+        <div class="title-container">
+          <h3>around the word</h3>
+          <h1>best selling tours</h1>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div></div>
+            <div class="card-detail">
+            <p>country</p>
+            <p>tour</p>
+            <div class="card-review">
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <span>#</span>
+                <span>reviews</span>
+              </div>
+            </div>
+            <div>
+              <span>full day</span>
+              <span>#</span>
+            </div>
+            <button class="btn" >view details</button>
+          </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div></div>
+            <div class="card-detail">
+            <p>country</p>
+            <p>tour</p>
+            <div class="card-review">
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <span>#</span>
+                <span>reviews</span>
+              </div>
+            </div>
+            <div>
+              <span>full day</span>
+              <span>#</span>
+            </div>
+            <button class="btn" >view details</button>
+          </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div></div>
+            <div class="card-detail">
+            <p>country</p>
+            <p>tour</p>
+            <div class="card-review">
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <span>#</span>
+                <span>reviews</span>
+              </div>
+            </div>
+            <div>
+              <span>full day</span>
+              <span>#</span>
+            </div>
+            <button class="btn" >view details</button>
+          </div>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <div></div>
+            <div class="card-detail">
+            <p>country</p>
+            <p>tour</p>
+            <div class="card-review">
+              <div>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div>
+                <span>#</span>
+                <span>reviews</span>
+              </div>
+            </div>
+            <div>
+              <span>full day</span>
+              <span>#</span>
+            </div>
+            <button class="btn" >view details</button>
+          </div>
+          </div>
+        </div>
+        
+        </div>
+      </section>
+    <footer>
+      <div id="block-up" class="block-up">
+        <div>
+          <p>about</p>
+          <p>
+            <span style="color: #56bd97 ;">Travela</span> is a Travel / Tourism Joomla Template built
+            with Helix Ultimate & SP Page Builder Pro.
+          </p>
+          <div class="pay-cards"></div>
+        </div>
+        <div>
+          <p>company</p>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">How We Work</a></li>
+            <li><a href="">Press Release</a></li>
+            <li><a href="">Work With Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p>links</p>
+          <ul>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Help Center</a></li>
+            <li><a href="">Destinations</a></li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <p>info</p>
+          <div>
+            <i></i>
+            <span>info@example.com</span>
+          </div>
+          <div>
+            <i></i>
+            <span>750 Brooklyn Street, 88 New York, USA</span>
+          </div>
+          <div>
+            <i></i>
+            <span style="color: #56bd97 ;">666 888 00000</span>
+          </div>
+        </div>
+        <div>
+          <p>contact</p>
+          <p><span style="color: #56bd97 ;" >Travela</span> Wanna Chat ? Just let Us Know When.</p>
+          <button>contact us -</button>
+        </div>
+      </div>
+      <div id="block-down" class="block-down">
+        <p>©2022 Travela. All Rights Reserved. Designed By Poets of Code</p>
+        <div id="social">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
